@@ -1,0 +1,51 @@
+<html>
+
+<body>
+
+<script>
+
+// let hexToDec=function(hexString){
+function hexToDec(hexString){
+ //your code here
+//  return parseInt(hexString,16);  
+
+     let result=0;
+     let hexstringArray =hexString.split('');
+     console.log(hexstringArray);
+     
+     hexstringArray.map((element,index)=>{
+     console.log("element:"+element , index);
+     switch(element){
+          case "a":
+               element=10;
+               console.log(element);
+               break;
+          default:
+               break;
+     }
+     parseInt(element);
+
+     console.log(typeof(element));
+     console.log(element);
+     console.log("hexstringArray.length:"+hexstringArray.length);
+     result=result+ element* Math.pow(16,(hexstringArray.length-index-1));//square the number
+     })
+     
+     return result;
+}
+
+console.log(hexToDec("-11"));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

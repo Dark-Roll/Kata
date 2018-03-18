@@ -1,0 +1,174 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+
+    let deadAntCount = function (ants) {
+  
+      console.log(ants + "1");
+      if (ants == null) return 0;
+  
+
+      let splitAnts = (ants||'').split(" ");
+
+ 
+  
+      let a=0, n = 0 , t = 0;
+
+
+      let calculateDeadAnt = (Arr) => {
+        // if (Arr =="") return 0;
+        console.log("Arr:" + Arr);
+        console.log(Array.isArray(Arr));
+        // Object.keys(Arr)
+        // Array like object?
+        // Array.from(Arr)
+        Arr.forEach((char) => {
+                         console.log(char)
+                         switch (char) {
+                              case 'a':
+                                   a++;
+                                   break;
+                              case 'n':
+                                   n++;
+                                   break;
+                              case 't':
+                                   t++;
+                                   break;
+                              default:
+                                   break;
+                         }
+                    })
+      }
+
+
+
+      let isAntAlive = (e) => {
+        // if (e==null) return 0;
+        let index = e.indexOf("ant");
+        if (index > -1) {
+
+          console.log(e, index);
+          let liveAntRemoveArray = (e||'').split("");
+          // if ()
+          let frontDeadAnts= liveAntRemoveArray.slice(0, index);
+          console.log("frontDeadAnts:" + Array.isArray(frontDeadAnts));
+          calculateDeadAnt(frontDeadAnts)
+          
+
+        let backDeadAnts = liveAntRemoveArray.slice(index + 3);
+          console.log(Array.isArray(backDeadAnts) );
+
+
+          isAntAlive(backDeadAnts.join(""))   
+          //makes error because the anantt will not be accumulated
+          // also for save memory
+        } else {
+          console.log("first element:" + e, index);
+          // let is = e;
+          // console.log("i"+is);
+          // return is;
+          // return 會變 undefined 找不到原因
+          // e == noAliveAntArray
+          
+
+          calculateDeadAnt(e.split(""))
+          // console.log("resultLa:"+calculateDeadAnt(e)); //undefined 因為沒有回傳直?
+
+        }
+        // 這個方法記下來  你會忘記
+      };
+
+      splitAnts.forEach((element) => {
+
+        isAntAlive(element);
+
+        // console.log(isAntAlive(element));
+        // get no alive ant, first (and every) element of array
+      })
+      return Math.max(a, n, t);
+      // for(i=0;i<splitAnts.length;i++){
+
+      // console.log("deadAntCalculater:"+deadAntCalculater);
+
+      // } 
+      // return deadAntCalculater;
+      //要先判斷活的還有沒有 才能做運算
+      // 自己call自己 也是可以替代for loop
+
+      // 可以把forEach的 function再拉出來
+      //eslint 
+    }
+
+    // 不用 for loop 的方法
+    // 全部都function ,functional programming的精隨
+
+    //可擴展性 而不是-1
+
+    console.log("result:" + deadAntCount("aannt aantnta"));
+// console.log("a");
+
+
+
+
+
+
+
+   // for (i = 0; i < cutAnts.length; i++) {
+     //      if (cutAnts[i] != "ant") {
+     //           let deadAnt = cutAnts[i].split(" ");
+     //           // console.log("deadAnt");
+     //           let aSum, nSum, tSum = 0;
+
+     //           for (j = 0; j < deadAnt.length; j++) {
+     //                if (deadAnt[j] + deadAnt[j + 1] + deadAnt[j + 2] == "ant") {
+
+     //                     console.log(deadAnt);
+     //                     if (deadAnt[j] = "a") {
+     //                          aSum++
+     //                     } else if (deadAnt[j] = "n") {
+     //                          nSum++
+     //                     } else if (deadAnt[j] = "t") {
+     //                          tSum++
+     //                     }
+     //                     console.log(aSum, " ", nSum, " ", tSum, " ");
+     //                }
+     //           }
+     //           var sum = Math.max(aSum, nSum, tSum) - 1;
+     //           return sum;
+
+     //           for (j = 0; j < deadAnt.length; j++) {
+     //                if (deadAnt[j] = "a") {
+     //                     aSum++
+     //                } else if (deadAnt[j] = "n") {
+     //                     nSum++
+     //                } else if (deadAnt[j] = "t") {
+     //                     tSum++
+     //                }
+
+     //           } var sum = Math.max(aSum, nSum, tSum);
+     //           return sum;
+     //      }
+
+     //      else {
+     //           return 0;
+     //      }
+
+
+     //      //console.log(ants.split(" "));
+
+     // }
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

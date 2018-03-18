@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+
+<body>
+     <script>
+
+          let deadAntCount = function (ants) {
+               let parts = (ants || '').split(' ');
+               let a = 0;
+               let n = 0;
+               let t = 0;
+               let countDeadBody = (array) => {
+                    array.forEach((char) => {
+                         console.log(char)
+                         switch (char) {
+                              case 'a':
+                                   a++;
+                                   break;
+                              case 'n':
+                                   n++;
+                                   break;
+                              case 't':
+                                   t++;
+                                   break;
+                              default:
+                                   break;
+                         }
+                    })
+               }
+               let separateAndCountDeadBody = (part) => {
+                    let index = part.indexOf('ant')
+                    let array = (part || '').split('')
+                    console.log('array', array)
+                    if (index > -1) {
+                         //前，把0-index前丟進計數器
+                         let front = array.slice(0, index);
+                         console.log('front', front);
+                         let back = array.slice(index + 3);
+                         console.log('back', back)
+                         //後，如果小於3，就丟進計數器，否則把index+3---，丟到下一次循環
+                         if (back.length >= 3) {
+                              countDeadBody(front)
+                              separateAndCountDeadBody(back.join(''));
+                         } else {
+                              console.log('front+back', front.concat(back))
+                              countDeadBody(front.concat(back));
+                         }
+                    } else {
+                         countDeadBody(array);
+                    }
+               }
+               parts.forEach((part) => {
+                    separateAndCountDeadBody(part)
+               })
+               console.log(a, n, t)
+               return Math.max(a, n, t)
+          }
+          console.log(deadAntCount("antantantan"));
+     </script>
+</body>
+
+</html>
