@@ -1,0 +1,84 @@
+.container {
+     width:30%;
+
+
+      margin:0 auto } .title { background:#545965;
+
+         color:#fff;
+         padding:15px;
+         float:left;
+         position:relative;
+         -webkit-border-top-left-radius:5px;
+         -webkit-border-bottom-left-radius:5px;
+         -moz-border-radius-topleft:5px;
+         -moz-border-radius-bottomleft:5px;
+         border-top-left-radius:5px;
+         border-bottom-left-radius:5px 
+    }
+
+
+     .bar-fill { height:15px;
+         display:block;
+         background:#45c9a5;
+         width:0;
+         border-radius:8px;
+
+        /* -webkit-transition:width .8s ease; */
+         /* -moz-transition:width .8s ease; */
+         transition:width .8s ease;
+
+        /* -webkit-animation:progressbar 7s infinite; */
+         animation:progressbar 7s infinite }
+
+         .bar-fill-stripes { height:15px;
+             display:block;
+             background:#e74c3c;
+             width:0;
+             border-radius:8px;
+
+             background-image:linear-gradient(-45deg,rgba(255,255,255,.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);
+             /* -webkit-transition:width .8s ease;
+             -moz-transition:width .8s ease; */
+             transition:width .8s ease;
+             /* -webkit-animation:progressbar 7s infinite; */
+             animation:progressbar 7s infinite 
+             /* animation-name: progress-bar-stripes; */
+            }
+    
+
+            /* @include background(linear-gradient(to bottom right, lighten($color, 40), $color)); */
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes progressbar { 
+    from { 
+        width:0 
+    } 
+    to { 
+        width:100% 
+    } 
+} 
+
+/* Standard syntax */ @keyframes progressbar { from { width:0 } to { width:100% } }
+
+
+
+.track-wrap { position:relative;
+     top:-18px;
+     -webkit-animation:progressbar2 7s infinite;
+     animation:progressbar2 7s infinite } .track { height:20px;
+     display:block;
+     background:#e74c3c;
+     width:20px;
+     border-radius:10px;
+     position:relative;
+     left:-12px } 
+     /* Chrome, Safari, Opera */ 
+@-webkit-keyframes progressbar2 { 
+    from { 
+        left:0 
+    } 
+    to { 
+        left:100% 
+    } 
+} /* Standard syntax */
+      @keyframes progressbar2 { from { left:0 } to { left:100% } }
