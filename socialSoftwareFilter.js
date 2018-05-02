@@ -10,7 +10,7 @@
 const filter=()=>{
     // let mes= document.querySelectorAll(".wrapper-sm");
     let mes= document.querySelectorAll(".avatar");
-    let arr=["男","boy","叔","色","處","飢渴","女"];
+    let arr=["男","boy","叔","色","處","飢渴","屌"]; //,"女"
     console.log("wait for someone")
     if (mes[0].nextSibling){    
         // console.log(filterTarget)
@@ -23,8 +23,10 @@ const filter=()=>{
                 console.log("matched")
                 let s =document.querySelector('#ban-confirm-btn');
                 let blockDiv =document.querySelectorAll('.modal-footer');
-                // s.click();
-                // blockDiv[0].childNodes[0].click();  // this doesn't work
+                s.click();
+
+                // lag  = =
+                blockDiv[0].childNodes[0].click();  // this doesn't work
             }
         })
         setTimeout(filter,3000);
