@@ -1,6 +1,7 @@
 
 // 只要不要自己離開 就能auto send 第一句 不管任何情況
 // 雙執行緒
+
 let curMid = -1;
 
 const fil = () => {
@@ -14,6 +15,8 @@ const fil = () => {
         }
     }
 
+
+
     isStart()
     // 還沒跑出來 抓不到怎麼寫function
     isAnybodyIn()
@@ -21,7 +24,7 @@ const fil = () => {
     let filterText = document.querySelectorAll('.stranger'); 
     if (filterText && filterText !== "") {
         let filterArr = ["男", "色", "boy", "臺北", "台北", "妹", "缺", "妳", "約", "嗯", "摁", "是啊", "Y", "恩", "對", "公的", "沒錯", "ㄣ", "雞雞", "Boy", "找女"];
-        filterArr.push("葛格", "女友", "修幹", "休幹", "北投","炮","女孩嗎","高雄","女？");
+        filterArr.push("葛格", "女友", "修幹", "休幹", "北投","炮","女孩嗎","高雄","女？","是的");
         let tempArr = Object.values(filterText).filter((e, i) => i % 2 == 0)
 
         // because it is not an array, it will be so complicated
