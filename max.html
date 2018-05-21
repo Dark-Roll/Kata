@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const max=(Arr)=>{
+        for (let i = Arr.length-1; i >1; i--) {
+            for (let j = 0; j < i; j++) {
+                if (Arr[j+1]>Arr[j]){
+                    let temp = Arr[j+1];
+                    Arr[j+1]=Arr[j];
+                    Arr[j]=temp;
+                }                
+            }            
+        }
+        return Arr[0];
+    }
+    
+    
+    
+    console.log(max([16,5,15,1]));
+</script>
+</body>
+</html>

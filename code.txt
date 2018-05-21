@@ -1,0 +1,52 @@
+﻿  $("[id='" + SETTING_WAIT_ACTION1 + "']").each(function(){
+      $(this).click(function(){return false;})
+  });
+  $("[id='" + SETTING_WAIT_ACTION2 + "']").each(function(){
+      $(this).click(function(){return false;})
+  });
+  
+  $("[id='" + SETTING_WAIT_ACTION1 + "']").each(function(){
+      $(this).off("click"); 
+  });
+  $("[id='" + SETTING_WAIT_ACTION2 + "']").each(function(){
+      $(this).off("click"); 
+  });
+
+
+$("[id='" + SETTING_WAIT_ACTION1 + "']")
+
+$(this).attr("id",SETTING_WAIT_ACTION1);
+
+$(document).ready(function () {
+    $("#btn_flipLG").click(function () {
+        $("#panelLG").css("display","block");
+        $("#panelSMG").css("display","none");
+        $("#panelWG").css("display","none");
+        $("#panelMG").css("display","none");
+        $("#panel").css("display","none");
+        $("#flip").css("display","none");
+    });
+});
+$(document).ready(function () {
+    $("#flip").click(function () {
+        $("#panel").css("display","block");
+    });
+});
+
+
+overflow : hidden ; (多的會消失 (scroll . auto 較常使用
+
+
+querySelector 的 .style 會複寫 寫在html的(div內)   而且原本 的CSS也會被蓋掉
+
+id 不能空白 (abb ca) 這是不行的 選不到
+
+getElementById 不能加.或#
+querySelector 要加.或#  
+
+getElementsByClassName  .querySelectorAll
+// 列出 所屬的div的樣子  而且不能加 .或#
+// 不過 selector 是列出node節點
+
+
+input 記資料 如果沒有在html關掉的話 是瀏覽器默認行為 要去瀏覽器設定

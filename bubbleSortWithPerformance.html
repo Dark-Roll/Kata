@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var times = 0;
+
+function ascending(a, b) {return a - b;}
+
+
+function swap(list, i, j) {
+    var ele = list[i];
+    list[i] = list[j];
+    list[j] = ele;
+}
+
+
+function bubbleTo(list, to, compare) {
+    var swapornot = 0;
+    for(var i = 0; i < to - 1; i++) {
+        if(compare(list[i + 1], list[i]) < 0) {
+            // i+1 < i 
+            // 先把最大的排到陣列最底
+        swap(list, i + 1, i);  
+        swapornot = 1;
+        // 表示需要再swap 
+      }
+
+    }
+
+     times++;
+    return swapornot;  
+
+}
+
+function bubbleSort(list, compare) {
+
+    for(var i = 0; i < list.length; i++) { 
+      var swap =  bubbleTo(list, list.length - i, compare);  //list.length -i 可以學一下
+        if(!swap)   // 0 .1 判斷 true of false
+           break;
+    }
+}
+
+var list = [10, 9, 1, 2, 5, 3, 8, 7];
+
+bubbleSort(list, ascending);
+console.log(list);
+console.log(times);
+
+</script>
+</body>
+</html>

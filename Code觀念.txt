@@ -1,0 +1,76 @@
+﻿
+元件寬度 
+float 
+Heroku 
+	熱重啟
+
+hackmd ?
+	hackmd 轉ppt
+
+
+--------
+
+選完超商 購物車會消失一下子
+
+效能差的原因是因為一直append 和 用 pure js 就能解決的問題
+降低選擇器的使用 比方說用變數儲存
+
+有void(0); 但還是連點有問題
+全部都依樣 為什麼會有bug?
+off click 不起作用
+
+檢測 抓到的值有沒有問題
+是不是真的function 沒運作? function有work
+
+為什麼+了 void(0); 就能work
+為什麼要兩個都加才能   一 個控制事前 一個控制事後?
+
+你CONSOLE多個id 呵呵 這是基礎吧?
+你怎麼知道 要 家void 0
+你怎麼知道 要加each ? 
+   為什麼 要查 return false 呵呵
+ID的寫法?
+$("[id='" + SETTING_WAIT_ACTION1 + "']")
+
+
+“Dear Bella，午安～
+
+我是亞星通的momo
+不好意思想跟您請教
+有關上一次新日本製藥，針對感謝頁分開的案件
+完成後2/26有收到貴司的「見積書」並回簽
+
+我想請教一下後續正式的收據(發票)的部份，大概預計何時會寄送過來呢？”
+adaibear, 3/6/2018, 12:03 PM
+
+Dear Momo, 
+詢問結果是，月初的五個工作天(營業日)之內就會收到，再麻煩留意一下喔
+
+
+
+append 就是大(在前)包小
+
+click(function(){
+    $("#c a").attr({
+        href:"javascript:void(0);"
+    });
+});
+
+雲架:
+https://hackmd.io/p/B1KnSumcZ#/12/1
+Heroku remote 和 app 名稱要git 在一起
+heroku git:remote -a yourapp (解法
+不要搞混ㄌ
+https://shiou.herokuapp.com
+(自己的網頁 還不知道怎麼修改
+一步一步檢測 你是新手不要操之過急 (看有沒有改對名
+
+
+https://github.com/ShizukuIchi/react-bouncing-text
+
+VScode
+你需要的是下面这两个插件，ctrl + shift + x 后输入这两个插件安装
+
+Auto Close Tag自动闭合HTML标签
+
+Auto Rename Tag 修改HTML标签时，自动修改匹配的标签

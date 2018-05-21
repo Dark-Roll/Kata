@@ -1,0 +1,59 @@
+<html>
+
+<body>
+
+<script>
+
+// function bandNameGenerator(str) {
+//   return str.slice(0,1) == str.slice(-1) ? str.slice(0,1).toUpperCase() + str.slice(1) + str.slice(1) : "The " + str.slice(0,1).toUpperCase() + str.slice(1);
+// }
+
+// bandNameGenerator = s => s[0] === s[s.length - 1] ? 
+//   `${s[0].toUpperCase()}${s.slice(1, -1)}${s}` :
+//   `The ${s[0].toUpperCase()}${s.slice(1)}`;
+
+function bandNameGenerator(str) {
+      
+  let NameArray=str.split("");
+  let FirstLetter =NameArray[0].toUpperCase();
+  
+  if(isSameLetter(str)===true){
+    // how to chang array value
+    
+    let concatArray = NameArray.slice(1,NameArray.length-1);
+    concatArray.unshift(FirstLetter);
+    return concatArray.concat(NameArray).join("");
+      
+  }else{
+      let SliceArray=NameArray.slice(1);
+    //   let UnrepeatArray= SliceArray.unshift('The ',FirstLetter);
+    SliceArray.splice(0,0,'The ',FirstLetter);//.join("");
+    //   let UnrepeatArray= NameArray.slice(1).unshift('The ',FirstLetter);
+    //   return SliceArray.unshift('The ',FirstLetter).join("");
+    //   console.log("UnrepeatArray: "+UnrepeatArray);  // why print 3
+    //   console.log("UnrepeatArray: "+SliceArray);  
+    //   return SliceArray.join("");
+      return SliceArray.join("");
+      
+      
+  }
+}
+
+function isSameLetter(str){
+    let LetterArray = str.split("");
+    if (LetterArray[0]===LetterArray[LetterArray.length-1] ){
+        //length??????
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+
+console.log(bandNameGenerator('kn'));
+
+</script>
+</body>
+
+</html>
