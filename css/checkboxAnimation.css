@@ -1,0 +1,43 @@
+.toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  width: 6rem;
+  height: 3rem;
+  background: $toggleBgc;
+  border-radius: 3rem;
+  transition: background .4s ease-in-out;  //讓球 會跑 不是跳轉的 左右
+  /* //? 還有 \ 為何要input display none */
+  /* zoom  ?? */
+  
+$linear: linear-gradient(90deg, #ef9aef,17.335443450312717%,#f399ba);
+
+  .ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    left: 0.5rem;
+    background-image:radial-gradient(
+        circle at 60% 40%,
+        white,
+        #dedede
+    );
+    border-radius: 100%;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    transition: transform .4s linear;
+    overflow: hidden;
+    .sleep,.smile {
+      position: absolute;
+      width: 2rem;
+      transition: transform .4s linear;  
+      }
+    .smile {
+      left: -4rem;
+    }
+  }
+}

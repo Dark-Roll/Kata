@@ -1,0 +1,43 @@
+@keyframes TOPIC_MOV {
+    0% {
+        background-image: url('../images/170616_javajQuery_TOPIC_N-min.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 80px 0 0 20px;
+        width: 500px;
+        height: 400px;
+    }
+    25% {
+        background-image: url('../images/170616_javajQuery_TOPIC_A-min.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 80px 0 0 20px;
+        width: 500px;
+        height: 400px;
+        transform: rotate(5deg);
+    }
+    50% {
+        background-image: url('../images/170616_javajQuery_TOPIC_B-min.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 80px 0 0 20px;
+        width: 500px;
+        height: 400px;
+    }
+    75% {
+        background-image: url('../images/170616_javajQuery_TOPIC_C-min.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 80px 0 0 20px;
+        width: 500px;
+        height: 400px;
+    }
+    100% {
+        background-image: url('../images/170616_javajQuery_TOPIC_N-min.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 80px 0 0 20px;
+        width: 500px;
+        height: 400px;
+    }
+}
